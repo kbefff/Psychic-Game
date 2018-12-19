@@ -1,56 +1,64 @@
+ // Creates an alphabet array
+ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+     't', 'u', 'v', 'w', 'x', 'y', 'z'
+ ];
+
+ // Creating variables to hold the number of wins, losses, and ties. They start at 0.
+ var wins = 0;
+ var losses = 0;
+ var guessesLeft = 5;
 
 
-
-// var randomNumber = generate a random number between 0 and 24
-var randomNumber = Math.floor(Math.random() * 25);
-console.log(randomNumber);
-
-// var alphabet = alphabet array 
-var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
-var randomLetter = alphabet[randomNumber];
-
-// var randomLetter = aphabet[randomNumber]
-console.log(randomLetter);
-
-var userInput = prompt("Guess what letter I'm thinking of...");
-
-// var guess = saved input lowercase
-var guess = userInput.toLowerCase();
-
-
-if (guess == randomLetter) {
-    console.log("you got it!");
-}
-
-
-else {
-
-
-}
-
-
-// if guess === randomLetter, print "you win!", 
-// irease "wins", 
-// hide "your guesses so far", 
-// restart
+ // Create variables that hold references to the places in the HTML where we want to display things.
+ var yourWins = document.getElementById("your-wins");
+ let yourlosses = document.getElementById("your-losses");
+ let yourGuessesLeft = document.getElementById("guesses-left");
+ let lettersGuessed = document.getElementById("letters-guessed");
+ let yourGuess = document.getElementById("your-guess");
+ let computerGuess = document.getElementById("computer-guess");
+ let button = document.getElementById("guess-again");
 
 
 
 
-// else { add guess to "your guesses so far"}, 
-// increase "loses", 
-// if loses = 10, print "you lose!"
+ // Randomly chooses a choice from the options array. This is the Computer's guess.
+ let randomLetter = alphabet[Math.floor(Math.random() * 25)];
+ console.log(randomLetter);
 
 
 
 
-// 7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
+ // var guess = saved input lowercase
+ let userInput = prompt("Guess what letter I'm thinking of...");
+ let guess = userInput.toLowerCase();
 
-// 8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
+ if (guess === randomLetter) {
+     console.log("same!");
+     wins++;
 
-// 9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
+ } else {
+     losses++;
+     lettersGuessed.append(guess + " ");
+
+ }
 
 
 
+ 
 
+ function myFunction() {
+    userInput = prompt("Guess what letter I'm thinking of...");
+
+};
+
+ //  function myFunction() {
+ //     document.getElementById("demo").innerHTML = "Hello World";
+ //   }
+
+ // Display the user and computer guesses, and wins/losses/ties.
+ yourWins.textContent = wins;
+ yourlosses.textContent = losses;
+ yourGuessesLeft.textContent = guessesLeft;
+ // lettersGuessed.textContent = guess.append(guess);
+ computerGuess.textContent = randomLetter;
+ yourGuess.textContent = guess;

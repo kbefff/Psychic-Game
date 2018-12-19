@@ -2,36 +2,92 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Psychic Game</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="assets/css/style.css" type="text/css" rel="stylesheet">
-    <script src="assets/javascript/script.js"></script>
 </head>
 
 <body>
 
 
+    <div class="container">
+        <div class="row headline">
 
-   
+            <div class="col-lg-12">
+                <h1>Guess a number...</h1><br>
+            </div>
 
-    <h3>Wins:</h3>
-    <p>(# of times the user has guessed the letter correctly)</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3 border">
+                <h4>Wins:</h4>
+            </div>
+            <div class="col-lg-3 border">
+                <h4 id="your-wins">0</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 ">
+            </div>
+            <div class="col-lg-3 border">
+                <h4>Losses:</h4>
+            </div>
+            <div class="col-lg-3 border">
+                <h4 id="your-losses">0</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3 border">
+                <h4>Guesses Left:</h4>
+            </div>
+            <div class="col-lg-3 border">
+                <h4 id="guesses-left">0</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3 border">
+                <h4>Letters Guessed:</h4>
+            </div>
+            <div class="col-lg-3 border">
+                <h4 id="letters-guessed"></h4>
+            </div>
+        </div>
 
-    <h3>Losses:</h3>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3 border">
+                <h4>Your guess...</h4>
+            </div>
+            <div class="col-lg-3 border">
+                <h4 id="your-guess"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3 border">
+                <h4>Computer guess...</h4>
+            </div>
+            <div class="col-lg-3 border">
+                <h4 id="computer-guess"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <button onclick="myFunction()" id="guess-again">Try again!</button>
+        </div>
 
-    <p>(# of times the user has failed to guess the letter correctly after exhausting all guesses)</p>
 
-    <h3>Guesses Left:</h3>
-    <p>(# of guesses left. This will update)</p>
-
-    <h3>Your Guesses So Far:</h3>
-    <p>(the specific letters that the user typed. Display these until the user either wins or loses.)</p>
-
-
-
-
+    </div>
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
